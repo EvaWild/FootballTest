@@ -19,6 +19,12 @@ body{
   overflow: hidden;
 }
 
+#volume {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
 header {
   padding: 20px;
 }

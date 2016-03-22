@@ -1,6 +1,6 @@
 $('#tv').YTPlayer({
   videoId: '5oD6ztcWapE',
-  mute: false,
+  mute: true,
   callback: function() {
     console.log("playerFinshed");
   }
@@ -159,4 +159,20 @@ $('#questions').on('click', 'button', function(){
 	$div.hide();
 	$div.next().fadeIn(200);
 	Q++;
+});
+
+$('#volume').click(function(){
+	var player = $('#tv').data('ytPlayer').player;
+	var $button = $(this);
+	if ($button.hasClass('btn-transparent')){
+		$button.removeClass('btn-transparent');
+		$button.addClass('btn-info');
+		player.unMute();
+	}
+	else {
+		$button.addClass('btn-transparent');
+		$button.removeClass('btn-info');
+		player.mute();		
+	}
+
 });
