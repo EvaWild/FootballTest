@@ -3,7 +3,7 @@ html {
 }
 
 body{
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Ubuntu', sans-serif !important;
   background-image: url('../images/background.jpg');
   background-size: cover;
   color: white;
