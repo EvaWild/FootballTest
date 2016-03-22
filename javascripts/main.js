@@ -1,5 +1,6 @@
 $('#tv').YTPlayer({
   videoId: '5oD6ztcWapE',
+  mute: false,
   callback: function() {
     console.log("playerFinshed");
   }
