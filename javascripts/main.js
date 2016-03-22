@@ -1,3 +1,10 @@
+$('#tv').YTPlayer({
+  videoId: 'eNHaUmUyuFA',
+  callback: function() {
+    console.log("playerFinshed");
+  }
+});
+
 var questions = [
 	{
 		header: 'Вопрос №1',
