@@ -144,35 +144,25 @@ $('#questions').on('click', 'button', function(){
 	var $li = $button.parent();
 	var index = $li.index();
 	var question = questions[Q];
-	if (index === question.correct)
-		score++;
 
-	if (Q === questions.length - 1){
-		$('#questions').hide();
-		$('#results span').html(score);
+	$button.removeClass('btn-success').addClass('btn-danger');
+	window.setTimeout(function(){
 
-		$('#results').fadeIn(200);
-		return;
-	}
+		if (index === question.correct)
+			score++;
 
-	var $div = $li.closest('div');
-	$div.hide();
-	$div.next().fadeIn(200);
-	Q++;
-});
+		if (Q === questions.length - 1){
+			$('#questions').hide();
+			$('#results span').html(score);
 
-$('#volume').click(function(){
-	var player = $('#tv').data('ytPlayer').player;
-	var $button = $(this);
-	if ($button.hasClass('btn-transparent')){
-		$button.removeClass('btn-transparent');
-		$button.addClass('btn-info');
-		player.unMute();
-	}
-	else {
-		$button.addClass('btn-transparent');
-		$button.removeClass('btn-info');
-		player.mute();		
-	}
+			$('#results').fadeIn(200);
+			return;
+		}
 
+		var $div = $li.closest('div');
+		$div.hide();
+		$div.next().fadeIn(200);
+		Q++;
+
+	}, 1000);
 });
