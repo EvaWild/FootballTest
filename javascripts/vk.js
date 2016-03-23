@@ -13,7 +13,7 @@ VK.init(function() {
 }, '5.50');
 
 function post(){
-	VK.api('wall.post', { message: 'Hello', attachments: photo_id }, function(){
-		console.log('Successful wall.post');
+	VK.api('wall.post', { message: 'Hello', attachments: photo_id, from_group: 1 }, function(result){
+		console.log('wall.post: ' + result);
 	});
 }
