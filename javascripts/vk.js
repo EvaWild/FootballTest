@@ -17,7 +17,7 @@ function post(score){
 	var photo;
 	if (score <= 4)
 		photo = photo1;
-	else if (sore <=9)
+	else if (score <= 9)
 		photo = photo2;
 	else 
 		photo = photo3;
