@@ -21,7 +21,7 @@ function post(score){
 		photo = photo2;
 	else 
 		photo = photo3;
-	VK.api('wall.post', { message: 'Тест на знание правил футбола. Проверь себя тут: http://vk.com/app5372390_260534269', attachments: photo, from_group: 1 }, function(result){
+	VK.api('wall.post', { message: 'Тест на знание правил футбола. Проверь себя тут: http://vk.com/app5372390', attachments: photo, from_group: 1 }, function(result){
 		console.log('wall.post: ' + result);
 	});
 }
