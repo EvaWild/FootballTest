@@ -1,6 +1,9 @@
+var photo_id = 'photo-71627954_402632215';
+
 VK.init(function() { 
   	console.log('Successful initializtion');
-  	VK.callMethod('showInviteBox');
+  	post();
+  	//VK.callMethod('showInviteBox');
      // API initialization succeeded 
      // Your code here 
 }, function() {
@@ -8,3 +11,9 @@ VK.init(function() {
      // API initialization failed 
      // Can reload page here 
 }, '5.50');
+
+function post(){
+	VK.api('wall.post', { message: 'Hello', attachments: photo_id }, function(){
+		console.log('Successful wall.post');
+	});
+}
