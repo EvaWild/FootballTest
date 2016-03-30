@@ -38,10 +38,13 @@ header {
 
 .btn-success, .btn-danger {
   width: 400px;
-  background-color: black;
-  border-color: white;
 }
 
+.btn-danger {
+  width: 400px;
+  background-color: #1EDE1E !important;
+  border-color: #0B130B !important;
+}
 
 h1 {
   text-shadow: 2px 2px 6px black;
