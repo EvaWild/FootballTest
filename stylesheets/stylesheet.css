@@ -38,6 +38,8 @@ header {
 
 .btn-success, .btn-danger {
   width: 400px;
+  background-color: black;
+  border-color: white;
 }
 
 
